@@ -165,7 +165,9 @@ To generate a Txt report Use `mvn test -Dcucumber.options="–plugin rerun:targe
   ![alt text](./image/Jira-Test-Exectuion.png)
   
 
-  
+  # Thank You !!
+#### Author by [Rushikesh Nagargoje](https://github.com/rnagargoje27/Devops_Projects)
 
-### THE END
+### Ensure to follow me on GitHub. Please star/share this repository!
+    
 
