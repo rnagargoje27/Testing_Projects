@@ -2,3 +2,7 @@
 
 ------------------------------
 ##Real Time Test Automation Project
+# Hit the Star! ⭐
+
+#### Author by Rushikesh Nagargoje
+
