@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+<<<<<<< HEAD
+      <td>07 Sep 2022, 15:39</td>
+=======
+      <td>07 Sep 2022, 18:28</td>
+>>>>>>> feature/Contact
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+<<<<<<< HEAD
+              <td class="location">com.testinium.step_definitions.Crm.userCanChangeAnyUserSInformationLikeAnd(java.lang.String,java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="15987000000">15.987</td>
+              <td class="duration" data-value="15987000000">15.987</td>
+              <td class="duration" data-value="15987000000">15.987</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanCreateTheNewPipeline()</td>
+              <td>1</td>
+              <td class="duration" data-value="3273000000">3.273</td>
+              <td class="duration" data-value="3273000000">3.273</td>
+              <td class="duration" data-value="3273000000">3.273</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanDragAndDropThePipeline()</td>
+              <td>1</td>
+              <td class="duration" data-value="20400000000">20.400</td>
+              <td class="duration" data-value="20400000000">20.400</td>
+              <td class="duration" data-value="20400000000">20.400</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanPrintTheProfile()</td>
+              <td>1</td>
+              <td class="duration" data-value="6227000000">6.227</td>
+              <td class="duration" data-value="6227000000">6.227</td>
+              <td class="duration" data-value="6227000000">6.227</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanRegisterNewCustomer()</td>
+              <td>1</td>
+              <td class="duration" data-value="6441000000">6.441</td>
+              <td class="duration" data-value="6441000000">6.441</td>
+              <td class="duration" data-value="6441000000">6.441</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanSaveInformation()</td>
+=======
+              <td class="location">com.testinium.step_definitions.Contacts.user_can_see_the_downloaded_file()</td>
+>>>>>>> feature/Contact
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+<<<<<<< HEAD
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanSeeNewPipeline()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanSeeTheNewChangesInProgress()</td>
+              <td>1</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="duration" data-value="85000000">0.085</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanSeeTheTotalPrice()</td>
+              <td>1</td>
+              <td class="duration" data-value="67000000">0.067</td>
+              <td class="duration" data-value="67000000">0.067</td>
+              <td class="duration" data-value="67000000">0.067</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userCanVerifyTheInformation()</td>
+              <td>1</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="duration" data-value="1000000">0.001</td>
+              <td class="failed">0.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.userClickOnThePipelineButton()</td>
+              <td>1</td>
+              <td class="duration" data-value="2975000000">2.975</td>
+              <td class="duration" data-value="2975000000">2.975</td>
+              <td class="duration" data-value="2975000000">2.975</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Crm.user_click_on_the_crm_dashboard()</td>
+              <td>4</td>
+              <td class="duration" data-value="1648750000">1.648</td>
+              <td class="duration" data-value="1648750000">2.618</td>
+              <td class="duration" data-value="6595000000">6.595</td>
+=======
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Contacts.user_clicks_the_print_button_and_then_select_due_payments()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="duration" data-value="0">0.000</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Contacts.user_is_at_contact_dashboard()</td>
+              <td>1</td>
+              <td class="duration" data-value="3145000000">3.145</td>
+              <td class="duration" data-value="3145000000">3.145</td>
+              <td class="duration" data-value="3145000000">3.145</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Contacts.user_selects_the_profile()</td>
+              <td>1</td>
+              <td class="duration" data-value="5668000000">5.668</td>
+              <td class="duration" data-value="5668000000">5.668</td>
+              <td class="duration" data-value="5668000000">5.668</td>
+>>>>>>> feature/Contact
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.testinium.step_definitions.Session.user_login_to_test_other_features()</td>
+<<<<<<< HEAD
+              <td>4</td>
+              <td class="duration" data-value="9533750000">9.533</td>
+              <td class="duration" data-value="9533750000">30.202</td>
+              <td class="duration" data-value="38135000000">38.135</td>
+=======
+              <td>1</td>
+              <td class="duration" data-value="15841000000">15.841</td>
+              <td class="duration" data-value="15841000000">15.841</td>
+              <td class="duration" data-value="15841000000">15.841</td>
+>>>>>>> feature/Contact
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+<<<<<<< HEAD
+            <td>13</td>
+            <td>19</td>
+            <td class="duration">5.272</td>
+            <td class="duration">38.135</td>
+            <td class="duration">1:40.186</td>
+=======
+            <td>5</td>
+            <td>5</td>
+            <td class="duration">4.930</td>
+            <td class="duration">15.841</td>
+            <td class="duration">24.654</td>
+>>>>>>> feature/Contact
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
